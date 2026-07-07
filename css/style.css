@@ -159,13 +159,14 @@ html[lang="en"] .lang-toggle__opt[data-lang-opt="en"] {
   justify-content: center;
 }
 
-.hero__weave svg { width: 100%; max-width: 320px; height: auto; }
+.hero__weave svg { width: 100%; max-width: 320px; height: auto; overflow: visible; }
 
-.weave-path { fill: none; }
-.weave-path--moss { color: var(--moss); }
-.weave-path--indigo { color: var(--indigo); }
-.weave-path--clay { color: var(--clay); }
+.weave-ribbon { fill: none; opacity: 0.92; }
+.weave-ribbon--moss { color: var(--moss); mix-blend-mode: multiply; }
+.weave-ribbon--indigo { color: var(--indigo); mix-blend-mode: multiply; }
+.weave-path--clay { fill: none; color: var(--clay); }
 .weave-knot { color: var(--clay); }
+.weave-grain { color: var(--ink); mix-blend-mode: overlay; opacity: 0.4; pointer-events: none; }
 
 /* ---------- forms ---------- */
 
