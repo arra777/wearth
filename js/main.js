@@ -1,6 +1,5 @@
 const i18n = {
   nl: {
-    "hero.pill": "IN OPBOUW — NOG NIET GELANCEERD",
     "hero.eyebrow": "EEN NIEUW SOORT GEMEENSCHAP",
     "hero.line1": "Geworteld in beoefening.",
     "hero.line2": "Verweven met gemeenschap.",
@@ -30,7 +29,6 @@ const i18n = {
     "footer.composition": "100% GEWORTELD · 100% ECHT"
   },
   en: {
-    "hero.pill": "IN THE MAKING — NOT LAUNCHED YET",
     "hero.eyebrow": "A NEW KIND OF COMMUNITY",
     "hero.line1": "Rooted in practice.",
     "hero.line2": "Woven into community.",

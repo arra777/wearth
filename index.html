@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<header class="header header--overlay">
+<header class="header">
   <div class="wrap header__inner">
     <a class="mark" href="#top">
       <svg class="mark__knot" width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
@@ -31,60 +31,37 @@
 
 <main id="top">
 
-  <section class="hero-atmos">
-    <svg class="hero-atmos__scene" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-      <defs>
-        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="var(--linen-soft)"/>
-          <stop offset="55%" stop-color="var(--gold)"/>
-          <stop offset="100%" stop-color="var(--gold-deep)"/>
-        </linearGradient>
-        <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="var(--gold-deep)"/>
-          <stop offset="35%" stop-color="var(--indigo)"/>
-          <stop offset="100%" stop-color="var(--moss-deep)"/>
-        </linearGradient>
-        <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="var(--gold)" stop-opacity="0.9"/>
-          <stop offset="100%" stop-color="var(--gold)" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
-
-      <rect x="0" y="0" width="1200" height="430" fill="url(#sky)"/>
-      <rect x="0" y="430" width="1200" height="290" fill="url(#water)"/>
-
-      <g transform="translate(230 -160)">
-        <circle cx="600" cy="430" r="190" fill="url(#glow)"/>
-        <g class="hero-atmos__knot">
-          <path d="M560 340c0-44 36-80 80-80s80 36 80 80-36 80-80 80" stroke="var(--ink)" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.75"/>
-          <path d="M640 260c44 0 80 36 80 80s-36 80-80 80-80-36-80-80" stroke="var(--ink)" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.35"/>
-        </g>
-        <g class="hero-atmos__knot hero-atmos__knot--reflect" transform="translate(0 860) scale(1 -1)">
-          <path d="M560 340c0-44 36-80 80-80s80 36 80 80-36 80-80 80" stroke="var(--ink)" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.75"/>
-          <path d="M640 260c44 0 80 36 80 80s-36 80-80 80-80-36-80-80" stroke="var(--ink)" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.35"/>
-        </g>
-      </g>
-
-      <path class="hero-atmos__cliff" d="M0 470 L120 470 220 380 300 470 340 430 400 470 L400 720 L0 720 Z" fill="var(--ink)" opacity="0.16"/>
-    </svg>
-
-    <div class="hero-atmos__scrim" aria-hidden="true"></div>
-
-    <div class="wrap hero-atmos__content">
-      <span class="pill" data-i18n="hero.pill">IN OPBOUW — NOG NIET GELANCEERD</span>
-      <p class="eyebrow eyebrow--onband" data-i18n="hero.eyebrow">EEN NIEUW SOORT GEMEENSCHAP</p>
-      <h1 class="hero-atmos__title">
+  <section class="hero wrap">
+    <div class="hero__text">
+      <p class="eyebrow" data-i18n="hero.eyebrow">EEN NIEUW SOORT GEMEENSCHAP</p>
+      <h1 class="hero__title">
         <span data-i18n="hero.line1">Geworteld in beoefening.</span><br>
-        <span class="hero-atmos__title--em" data-i18n="hero.line2">Verweven met gemeenschap.</span>
+        <span class="hero__title--em" data-i18n="hero.line2">Verweven met gemeenschap.</span>
       </h1>
-      <p class="hero-atmos__sub" data-i18n="hero.sub">Wearth is een yoga- en lifestylegemeenschap — gegrond in natuurlijke kleding, echte verbinding en een rustiger manier van leven.</p>
+      <p class="hero__sub" data-i18n="hero.sub">Wearth is een yoga- en lifestylegemeenschap — gegrond in natuurlijke kleding, echte verbinding en een rustiger manier van leven.</p>
 
-      <form class="signup-form signup-form--onband" id="heroForm" novalidate>
+      <form class="signup-form" id="heroForm" novalidate>
         <label class="visually-hidden" for="heroEmail" data-i18n="hero.formLabel">E-mailadres</label>
         <input type="email" id="heroEmail" name="email" required data-i18n-placeholder="hero.formPlaceholder" placeholder="jij@email.nl">
         <button type="submit" data-i18n="hero.formButton">Sluit je aan</button>
       </form>
-      <p class="form-note form-note--onband" data-i18n="hero.formNote">Geen spam. Eén bericht zodra we starten.</p>
+      <p class="form-note" data-i18n="hero.formNote">Geen spam. Eén bericht zodra we starten.</p>
+    </div>
+
+    <div class="hero__weave" aria-hidden="true">
+      <svg viewBox="0 0 320 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="fabricGrain" x="-20%" y="-20%" width="140%" height="140%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"/>
+            <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0"/>
+          </filter>
+        </defs>
+        <path class="weave-ribbon weave-ribbon--moss" d="M60 30 C 170 70, 30 150, 150 190 S 270 310, 140 355" stroke="currentColor" stroke-width="22" stroke-linecap="round"/>
+        <path class="weave-ribbon weave-ribbon--indigo" d="M260 20 C 130 80, 290 140, 160 200 S 30 320, 190 365" stroke="currentColor" stroke-width="20" stroke-linecap="round"/>
+        <path class="weave-path--clay" d="M15 205 C 100 175, 220 225, 305 195" stroke="currentColor" stroke-width="2" stroke-dasharray="1 10" stroke-linecap="round"/>
+        <circle cx="150" cy="188" r="7" fill="currentColor" class="weave-knot"/>
+        <rect x="0" y="0" width="320" height="380" filter="url(#fabricGrain)" class="weave-grain"/>
+      </svg>
     </div>
   </section>
 
