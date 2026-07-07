@@ -1,0 +1,376 @@
+:root {
+  --linen: #EDE6D6;
+  --linen-soft: #F5F0E4;
+  --ink: #2B231C;
+  --moss: #5C6B47;
+  --moss-deep: #46512F ;
+  --indigo: #3F5262;
+  --clay: #B06A3D;
+  --stone: #A69C8A;
+
+  --display: "Newsreader", serif;
+  --body-font: "Karla", sans-serif;
+  --mono: "IBM Plex Mono", monospace;
+
+  --wrap: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--linen);
+  color: var(--ink);
+  font-family: var(--body-font);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 1.75rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 3px;
+}
+
+/* ---------- header ---------- */
+
+.header {
+  padding: 1.5rem 0;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.mark__knot { color: var(--moss); }
+
+.lang-toggle {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  background: none;
+  border: 1px solid var(--stone);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+  color: var(--ink);
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.lang-toggle__opt { opacity: 0.45; }
+html[lang="nl"] .lang-toggle__opt[data-lang-opt="nl"],
+html[lang="en"] .lang-toggle__opt[data-lang-opt="en"] {
+  opacity: 1;
+  font-weight: 700;
+}
+
+/* ---------- eyebrow / tags ---------- */
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--moss-deep);
+  margin: 0 0 1.1rem;
+}
+
+.eyebrow--center { text-align: center; }
+.eyebrow--onmoss { color: var(--linen-soft); opacity: 0.85; }
+
+.tag {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--stone);
+  margin: 0 0 0.6rem;
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 1.75rem 5rem;
+}
+
+.hero__title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+  line-height: 1.14;
+  margin: 0 0 1.4rem;
+  letter-spacing: -0.01em;
+}
+
+.hero__title--em {
+  font-style: italic;
+  color: var(--moss-deep);
+}
+
+.hero__sub {
+  max-width: 34rem;
+  color: #4a4237;
+  font-size: 1.08rem;
+  margin: 0 0 2rem;
+}
+
+.hero__weave {
+  color: var(--stone);
+  display: flex;
+  justify-content: center;
+}
+
+.hero__weave svg { width: 100%; max-width: 320px; height: auto; }
+
+.weave-path { fill: none; }
+.weave-path--moss { color: var(--moss); }
+.weave-path--indigo { color: var(--indigo); }
+.weave-path--clay { color: var(--clay); }
+.weave-knot { color: var(--clay); }
+
+/* ---------- forms ---------- */
+
+.signup-form {
+  display: flex;
+  gap: 0.6rem;
+  max-width: 26rem;
+  flex-wrap: wrap;
+}
+
+.signup-form input {
+  flex: 1 1 12rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--stone);
+  border-radius: 0.35rem;
+  background: var(--linen-soft);
+  font-family: var(--body-font);
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+
+.signup-form input::placeholder { color: #8d8271; }
+
+.signup-form button {
+  padding: 0.85rem 1.4rem;
+  background: var(--moss-deep);
+  color: var(--linen-soft);
+  border: none;
+  border-radius: 0.35rem;
+  font-family: var(--body-font);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.signup-form button:hover { background: var(--moss); }
+
+.form-note {
+  font-size: 0.82rem;
+  color: var(--stone);
+  margin: 0.7rem 0 0;
+}
+
+.signup-form--onmoss input {
+  background: rgba(245, 240, 228, 0.12);
+  border-color: rgba(245, 240, 228, 0.4);
+  color: var(--linen-soft);
+}
+.signup-form--onmoss input::placeholder { color: rgba(245, 240, 228, 0.55); }
+.signup-form--onmoss button {
+  background: var(--linen-soft);
+  color: var(--moss-deep);
+}
+.signup-form--onmoss button:hover { background: #fff; }
+
+.form-thanks {
+  margin-top: 0.9rem;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--linen-soft);
+}
+
+/* ---------- pillars ---------- */
+
+.pillars {
+  position: relative;
+  padding: 4rem 1.75rem 5rem;
+  display: grid;
+  gap: 2.6rem;
+}
+
+.thread {
+  position: absolute;
+  left: 1.75rem;
+  top: 3.2rem;
+  bottom: 1rem;
+  width: 2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--stone) 0 4px,
+    transparent 4px 10px
+  );
+}
+
+.thread__fill {
+  position: absolute;
+  top: 0; left: 0; width: 100%;
+  height: 0%;
+  background: var(--moss);
+  transition: height 0.2s linear;
+}
+
+.pillar {
+  position: relative;
+  padding-left: 2.6rem;
+  max-width: 42rem;
+}
+
+.pillar__knot {
+  position: absolute;
+  left: calc(1.75rem - 5px);
+  top: 0.35rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--linen);
+  border: 2px solid var(--moss);
+}
+
+.pillar h2 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0 0 0.6rem;
+}
+
+.pillar p:not(.tag) { color: #4a4237; margin: 0; }
+
+@media (min-width: 720px) {
+  .pillars { padding-left: 3.5rem; }
+  .thread { left: 3.5rem; }
+  .pillar { padding-left: 3rem; }
+  .pillar__knot { left: calc(3.5rem - 5px); }
+}
+
+/* ---------- manifesto ---------- */
+
+.manifesto {
+  background: var(--linen-soft);
+  border-top: 1px solid #ddd4c1;
+  border-bottom: 1px solid #ddd4c1;
+}
+
+.manifesto__inner {
+  padding: 4.5rem 1.75rem;
+  max-width: 42rem;
+}
+
+.manifesto h2 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+
+.manifesto p { color: #4a4237; margin: 0; }
+
+/* ---------- signup band ---------- */
+
+.signup {
+  background: var(--moss-deep);
+  color: var(--linen-soft);
+}
+
+.signup__inner {
+  padding: 4.5rem 1.75rem;
+  max-width: 34rem;
+  text-align: left;
+}
+
+.signup h2 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin: 0 0 0.9rem;
+}
+
+.signup p:not(.eyebrow) { opacity: 0.92; margin: 0 0 1.8rem; }
+
+/* ---------- footer ---------- */
+
+.footer { padding: 2.5rem 0 3rem; }
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-top: 1px dashed var(--stone);
+  padding-top: 1.4rem;
+}
+
+.footer__label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--stone);
+  margin: 0;
+}
+
+.footer__copy {
+  font-size: 0.82rem;
+  color: var(--stone);
+  margin: 0;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 780px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+  }
+  .hero__weave { order: -1; }
+  .hero__weave svg { max-width: 220px; }
+}

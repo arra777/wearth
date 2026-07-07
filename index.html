@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Wearth is a yoga and lifestyle community rooted in natural clothing, real connection, and a slower way of living.">
+<title>Wearth — Geworteld in beoefening, verweven met gemeenschap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Karla:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="mark" href="#top">
+      <svg class="mark__knot" width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <path d="M4 13c0-5 4-9 9-9s9 4 9 9-4 9-9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M13 4c5 0 9 4 9 9s-4 9-9 9-9-4-9-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.45"/>
+      </svg>
+      Wearth
+    </a>
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
+      <span class="lang-toggle__opt" data-lang-opt="nl">NL</span>
+      <span class="lang-toggle__sep">/</span>
+      <span class="lang-toggle__opt" data-lang-opt="en">EN</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <div class="hero__text">
+      <p class="eyebrow" data-i18n="hero.eyebrow">EEN NIEUW SOORT GEMEENSCHAP</p>
+      <h1 class="hero__title">
+        <span data-i18n="hero.line1">Geworteld in beoefening.</span><br>
+        <span class="hero__title--em" data-i18n="hero.line2">Verweven met gemeenschap.</span>
+      </h1>
+      <p class="hero__sub" data-i18n="hero.sub">Wearth is een yoga- en lifestylegemeenschap — gegrond in natuurlijke kleding, echte verbinding en een rustiger manier van leven.</p>
+
+      <form class="signup-form" id="heroForm" novalidate>
+        <label class="visually-hidden" for="heroEmail" data-i18n="hero.formLabel">E-mailadres</label>
+        <input type="email" id="heroEmail" name="email" required data-i18n-placeholder="hero.formPlaceholder" placeholder="jij@email.nl">
+        <button type="submit" data-i18n="hero.formButton">Sluit je aan</button>
+      </form>
+      <p class="form-note" data-i18n="hero.formNote">Geen spam. Eén bericht zodra we starten.</p>
+    </div>
+
+    <div class="hero__weave" aria-hidden="true">
+      <svg viewBox="0 0 320 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="weave-path weave-path--moss" d="M60 20 C 160 60, 40 140, 150 180 S 260 300, 140 360" stroke="currentColor" stroke-width="2"/>
+        <path class="weave-path weave-path--indigo" d="M260 10 C 140 70, 280 130, 160 190 S 40 310, 180 370" stroke="currentColor" stroke-width="2"/>
+        <path class="weave-path weave-path--clay" d="M20 200 C 100 170, 220 220, 300 190" stroke="currentColor" stroke-width="1.4" stroke-dasharray="1 9" stroke-linecap="round"/>
+        <circle cx="150" cy="180" r="4" fill="currentColor" class="weave-knot"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="pillars wrap" id="pillars">
+    <p class="eyebrow eyebrow--center" data-i18n="pillars.eyebrow">DRIE DRADEN, ÉÉN WEEFSEL</p>
+
+    <div class="thread" aria-hidden="true"><div class="thread__fill" id="threadFill"></div></div>
+
+    <article class="pillar">
+      <span class="pillar__knot" aria-hidden="true"></span>
+      <p class="tag" data-i18n="pillar1.tag">BEOEFENING</p>
+      <h2 data-i18n="pillar1.title">Yoga als aanwezigheid</h2>
+      <p data-i18n="pillar1.body">Lessen en bijeenkomsten die je terugbrengen naar je adem — niet naar prestatie. Rustig tempo, veel ruimte, weinig poeha.</p>
+    </article>
+
+    <article class="pillar">
+      <span class="pillar__knot" aria-hidden="true"></span>
+      <p class="tag" data-i18n="pillar2.tag">GEMEENSCHAP</p>
+      <h2 data-i18n="pillar2.title">Een kring die blijft</h2>
+      <p data-i18n="pillar2.body">Mensen die er voor elkaar zijn, op en naast de mat. Gemeenschap is niet een extraatje bij Wearth — het is het uitgangspunt.</p>
+    </article>
+
+    <article class="pillar">
+      <span class="pillar__knot" aria-hidden="true"></span>
+      <p class="tag" data-i18n="pillar3.tag">MATERIAAL</p>
+      <h2 data-i18n="pillar3.title">Kleding die ademt</h2>
+      <p data-i18n="pillar3.body">Organische, natuurlijk geverfde stoffen die met je meebewegen en jarenlang meegaan — gemaakt om te dragen, niet om te vervangen.</p>
+    </article>
+  </section>
+
+  <section class="manifesto">
+    <div class="wrap manifesto__inner">
+      <p class="eyebrow" data-i18n="manifesto.eyebrow">WAAROM WEARTH</p>
+      <h2 data-i18n="manifesto.title">We wilden geen studio die ook kleding verkoopt.</h2>
+      <p data-i18n="manifesto.body">We wilden één ding, drie kanten. Dus bouwen we het rustig op: eerst een gemeenschap, dan lessen, dan de eerste stoffen. Alles geworteld in hetzelfde idee — vertraag, verbind, draag wat ademt.</p>
+    </div>
+  </section>
+
+  <section class="signup" id="signup">
+    <div class="wrap signup__inner">
+      <p class="eyebrow eyebrow--onmoss" data-i18n="signup.eyebrow">WORD LID VAN HET BEGIN</p>
+      <h2 data-i18n="signup.title">We bouwen dit langzaam, en met zorg.</h2>
+      <p data-i18n="signup.body">Laat je e-mailadres achter en hoor als eerste over de oprichtende gemeenschap, de eerste lessen en de eerste kledingdrop.</p>
+
+      <form class="signup-form signup-form--onmoss" id="footerForm" novalidate>
+        <label class="visually-hidden" for="footerEmail" data-i18n="hero.formLabel">E-mailadres</label>
+        <input type="email" id="footerEmail" name="email" required data-i18n-placeholder="hero.formPlaceholder" placeholder="jij@email.nl">
+        <button type="submit" data-i18n="signup.button">Houd me op de hoogte</button>
+      </form>
+      <p class="form-thanks" id="formThanks" data-i18n="signup.thanks" hidden>Bedankt — je hoort snel van ons.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p class="footer__label" data-i18n="footer.composition">100% GEWORTELD · 100% ECHT</p>
+    <p class="footer__copy">&copy; <span id="year"></span> Wearth</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
